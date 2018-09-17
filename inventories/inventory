@@ -2,6 +2,6 @@
 127.0.0.1
 
 [agent:vars]
-ansible_ssh_user=nessaek
+ansible_ssh_user=[ADD_YOUR_USERNAME]
 
-credentials_file=/Users/nke09/ansible-gcp/Kubernetes Test Project V1-bf84ad0ee414.json
+credentials_file=[ADD_YOUR_CREDENTIALS_FILE]
