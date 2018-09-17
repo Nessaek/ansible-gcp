@@ -4,7 +4,6 @@
   gather_facts: no
 
   tasks:
-
     - name: Launch gcp instance
       gce:
         instance_names: test-gcp-instance
@@ -13,7 +12,7 @@
         image: debian-7
         state: present
         service_account_email: "6482385789-compute@developer.gserviceaccount.com"
-        credentials_file: "/Users/nke09/ansible-k8s/Kubernetes Test Project V1-bf84ad0ee414.json"
+        credentials_file: "/Users/nke09/ansible-gcp/Kubernetes Test Project V1-bf84ad0ee414.json"
         project_id: "kubernetes-test-project-v1"
 
 

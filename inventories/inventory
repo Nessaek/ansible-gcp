@@ -1,0 +1,7 @@
+[agent]
+127.0.0.1
+
+[agent:vars]
+ansible_ssh_user=nessaek
+
+credentials_file=/Users/nke09/ansible-gcp/Kubernetes Test Project V1-bf84ad0ee414.json

@@ -1,13 +1,7 @@
-# Deploy to GCP Kubernetes using Ansible
+# Create GCP Instance With Ansible
 
 ## One-time run playbook
-Install all the dependecies in a remote machine which will deploy to Kubernetes
 ```
-ansible-playbook -i inventories/agents enable-machine-to-deploy-to-k8s.yaml --key-file "~/.ssh/mykey.pem"
+ansible-playbook -i inventories/agents instance-provision.yaml --key-file "~/.ssh/mykey.pem"
 ```
-
-## From the agent above
-Run this playbook to deploy a "Hello World" type of container
-```
-ansible-playbook -i inventories/tutum tutum-deploy
-```
+/Users/nke09/ansible-gcp/Kubernetes Test Project V1-bf84ad0ee414.json
