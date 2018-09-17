@@ -2,6 +2,6 @@
 127.0.0.1
 
 [agent:vars]
-ansible_ssh_user=test
+ansible_ssh_user=[YOUR_USERNAME]
 
-credentials_file=test22222
+credentials_file=[PATH_TO_YOUR_GCP_CREDS]
