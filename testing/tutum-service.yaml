@@ -1,0 +1,12 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: tutum-web
+  namespace: testing
+spec:
+  ports:
+    - protocol: TCP
+      name: port-80-tcp
+      port: 80
+      targetPort: 80

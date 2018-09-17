@@ -1,0 +1,36 @@
+---
+- hosts: agent
+  connection: local
+  gather_facts: no
+
+  tasks:
+
+    - name: Launch gcp instance
+      gce:
+        instance_names: test-gcp-instance
+        zone: us-central1-a
+        machine_type: n1-standard-1
+        image: debian-7
+        state: present
+        service_account_email: "6482385789-compute@developer.gserviceaccount.com"
+        credentials_file: "/Users/nke09/ansible-k8s/Kubernetes Test Project V1-bf84ad0ee414.json"
+        project_id: "kubernetes-test-project-v1"
+
+
+#    - name: Install build-essential
+#      apt:
+#        name: build-essential
+#        state: latest
+#
+#    - name: Install Ansible
+#      pip:
+#        name: ansible
+#        state: latest
+#
+#    - name: Clone ansible-k8s project
+#      git:
+#        repo: https://gitlab.com/nessaek/ansible-k8s.git
+#        dest: ans-k8s
+#      become: no
+
+
