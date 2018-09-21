@@ -6,30 +6,31 @@
   tasks:
     - name: Launch gcp instance
       gce:
-        instance_names: test-gcp-instance
+        instance_names: "{{instance_names}}"
         zone: us-central1-a
         machine_type: n1-standard-1
-        image: debian-7
+        image: ubuntu-1604
         state: present
-        service_account_email: "6482385789-compute@developer.gserviceaccount.com"
-        credentials_file: "/Users/nke09/ansible-gcp/Kubernetes Test Project V1-bf84ad0ee414.json"
-        project_id: "kubernetes-test-project-v1"
+        service_account_email: "{{ gce }}"
+        credentials_file: "creds.json"
+        project_id: "{{project_id}}"
+
+#    - name: Tear down gcp instance
+#      gce:
+#        service_account_email: "{{ service_account_email }}"
+#        credentials_file: "{{ credentials_file }}"
+#        project_id: "{{ project_id }}"
+#        instance_names: "{{ gce.instance_names }}"
+#        zone: us-central1-a
+#        state: absent
 
 
-#    - name: Install build-essential
-#      apt:
-#        name: build-essential
-#        state: latest
-#
-#    - name: Install Ansible
-#      pip:
-#        name: ansible
-#        state: latest
-#
-#    - name: Clone ansible-k8s project
+
+
+#    - name: Clone project to be run
 #      git:
-#        repo: https://gitlab.com/nessaek/ansible-k8s.git
-#        dest: ans-k8s
+#        repo: https://github.com/Nessaek/carriequotes.git
+#        dest: ~/
 #      become: no
 
 

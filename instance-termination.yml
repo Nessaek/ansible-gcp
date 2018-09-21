@@ -1,0 +1,14 @@
+---
+- hosts: agent
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: Tear down gcp instance
+    gce:
+      service_account_email: "{{ gce }}"
+      credentials_file: "creds.json"
+      project_id: "{{ project_id }}"
+      instance_names: "{{ instance_names }}"
+      zone: us-central1-a
+      state: absent

@@ -1,7 +1,12 @@
 # Create GCP Instance With Ansible
 
 ## One-time run playbook
+
+Create an instance:
 ```
-ansible-playbook -i inventories/agents instance-provision.yaml --key-file "~/.ssh/mykey.pem"
+ansible-playbook -i inventories/ instance-provision.yaml --key-file "~/.ssh/mykey"
 ```
-/Users/nke09/ansible-gcp/Kubernetes Test Project V1-bf84ad0ee414.json
+Terminate an instance:
+```
+ansible-playbook -i inventories/ instance-termination.yaml --key-file "~/.ssh/mykey"
+```
