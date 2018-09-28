@@ -1,0 +1,5 @@
+---
+    - name: Clone project to be run
+      git:
+        repo: https://github.com/Nessaek/carriequotes.git
+        dest: /tmp
